@@ -1,3 +1,3 @@
 # list-data-crawling
 
-Data Crawling teridir dari 500++ data berita
+Data Crawling terdiri dari 500++ data berita
