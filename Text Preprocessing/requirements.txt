@@ -1,0 +1,3 @@
+nltk==3.4.*
+matplotlib==3.*
+pySastrawi==1.2.*
