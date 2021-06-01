@@ -11,20 +11,6 @@ from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 df = pd.read_csv (r'https://raw.githubusercontent.com/irwanmaulana42/list-data-crawling/master/list%20data.csv')
 contents = df.values
 
-def unique(list1):
- 
-    # intilize a null list
-    unique_list = []
-     
-    # traverse for all elements
-    for x in list1:
-        # check if exists in unique_list or not
-        if x not in unique_list:
-            unique_list.append(x)
-    
-    return unique_list 
-
-# content = contents[0]
 AllTipe = ['Ekonomi', 'Nasional', 'Hiburan', 'Olahraga', 'Teknologi', 'Internasional', 'Gaya Hidup']
 AllContent = []
 
@@ -75,13 +61,12 @@ for content in contents:
     data = {"title": title,"realTipe": tipe, "content": hasilStemming.split(), "allTipe": AllTipe}
     AllContent.append(data);
 
-# print(AllContent)
 # now we will open a file for writing
 data_file = open('Result of Text Processing.csv', 'w', newline='')
  
 # create the csv writer object
 csv_writer = csv.writer(data_file)
- 
+
 # Counter variable used for writing
 # headers to the CSV file
 count = 0
